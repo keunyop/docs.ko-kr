@@ -68,7 +68,7 @@ var newData = transformer.Transform(oldData)
 
 ### <a name="transformer-chains"></a>변환기 체인
 
-변환기의 유용한 속성은 *변환기의 순차적인 적용을 다른 변환기로 빌드 할 수 있다는 점입니다*.
+변환기의 유용한 속성은 *변환기의 순차적인 적용을 다른 변환기로 빌드할 수 있다는 점입니다*.
 
 ```csharp
 var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
@@ -80,7 +80,7 @@ var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
 
 데이터 판독기는 데이터를 '생성'하는 ML.NET 구성 요소입니다. `T` 인스턴스를 사용하여 데이터를 반환합니다.
 
-흥미로운 점은, 기존 데이터 판독기에 변환기를 연결하여 데이터 판독기를 만들 수 있습니다. 이러한 방식으로 변환 동작이 베이킹 된 판독기를 사용 수 있습니다.
+흥미로운 점은, 기존 데이터 판독기에 변환기를 연결하여 데이터 판독기를 만들 수 있습니다. 이러한 방식으로 변환 동작이 베이킹된 판독기를 사용 수 있습니다.
 
 ```csharp
 var newReader = reader.Append(transformer1).Append(transformer2)
